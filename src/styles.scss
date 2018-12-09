@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+@media (max-width: 768px) {
+    .welcometext {
+        font-size: 38px;
+    }
+}
+
+
+/* MOBILE VIEW */
+
+@media (max-width: 500px) {
+    .welcometext {
+        font-size: 28px;
+    }
+}

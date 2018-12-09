@@ -1,0 +1,58 @@
+.navbar-dark-theme {
+    background-color: #282a2b!important;
+}
+
+.navbar-title {
+    color: white;
+    margin-left: 15px;
+}
+
+.dock-select {
+    max-width: 100px;
+    margin: 0 auto;
+}
+
+.center-center {
+    position: absolute;
+    min-width: 400px;
+    padding: 10px;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.gameControl span {
+    color: white;
+}
+
+.cardTry {
+    z-index: 1001;
+}
+
+.cardBox {
+    width: 200px;
+}
+
+.cardRow {
+    margin-top: 5px;
+}
+
+.cardContainer {
+    max-width: 700px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+
+/* MOBILE VIEW */
+
+@media (max-width: 500px) {
+    .center-center {
+        min-width: 250px;
+    }
+}

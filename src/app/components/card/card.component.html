@@ -1,0 +1,4 @@
+<div class="cardItem d-flex justify-content-center align-items-center" [ngClass]="{'cardTry':cardObject.status === 0}" (click)="Flip()">
+    <div [ngClass]="{'cover':cardObject.status === 0}"></div>
+    <img class="card-img-top" src="{{cardObject.img}}" alt="Card">
+</div>

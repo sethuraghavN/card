@@ -1,0 +1,52 @@
+<nav class="navbar navbar-light navbar-dark-theme">
+    <a class="navbar-brand" href="#">
+        <img src="../../../assets/images/supercharge-logo.svg" width="30" height="30" alt="">
+        <span class="navbar-title">MEMORY FLASH</span>
+    </a>
+    <nav class="navbar navbar-light gameControl">
+        <span class="navbar-text">
+            Deck size: {{deckSize.length}}
+        </span>
+    </nav>
+</nav>
+
+<div class="center-center" *ngIf="!showGameBoard">
+    <div class="row">
+        <div class="col">
+            <h1 class="display-4 welcometext">FLASH</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <p class="lead">MEMORY GAME</p>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col">
+            <p>Deck size</p>
+            <select class="form-control dock-select" [(ngModel)]="decknumber">
+                <option *ngFor="let dock of deckSize" [value]="dock">{{dock}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col mt-3">
+            <button type="button" class="btn btn-outline-danger" (click)="StartGame()">START NEW GAME</button>
+        </div>
+    </div>
+</div>
+
+<div class="container" *ngIf="showGameBoard">
+    <div class="d-flex justify-content-between p-4">
+        <div class="tries">Current tries: {{currentTries}}</div>
+        <div class="best">9</div>
+        <div class="restart">
+            <button type="button" class="btn btn-outline-secondary" (click)="Restart()">Restart</button>
+        </div>
+    </div>
+    <div class="cardContainer">
+        <div *ngFor="let y = index; let box of rowNumber" class="cardRow d-flex justify-content-center">
+            <app-card *ngFor="let card of cardCollection.slice((y*5),(5+(y*5)))" [cardObject]="card" (eventClick)="Flip($event)"></app-card>
+        </div>
+    </div>
+</div>
